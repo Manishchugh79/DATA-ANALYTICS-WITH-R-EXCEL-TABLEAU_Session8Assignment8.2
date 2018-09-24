@@ -1,0 +1,59 @@
+s
+
+
+
+
+    Session 8 – Exploratory
+        Data Analytics
+         Assignment - 2
+Copyrights© 2017, AcadGild. All Rights Reserved   1
+Contents
+
+  Introduction ..................................................................................................................................................... 3
+
+  Objective .......................................................................................................................................................... 3
+
+  Prerequisites .................................................................................................................................................... 3
+
+  Associated Data Files ....................................................................................................................................... 3
+
+  Problem Statement ......................................................................................................................................... 3
+
+  Expected Output .............................................................................................................................................. 3
+
+
+
+
+   Copyrights© 2017, AcadGild. All Rights Reserved                                                                                                                2
+   Introduction
+This assignment will help you to understand the key concepts learnt in this session.
+
+
+   Objective
+This assignment will test your skills on Variables and Distributions in R.
+
+
+   Prerequisites
+Not Applicable
+
+
+   Associated Data Files
+Not Applicable
+
+
+   Problem Statement
+library(RcmdrPlugin.IPSUR)
+data(RcmdrTestDrive)
+Perform the below operations:
+ 1. Compute the measures of central tendency for salary and reduction which variable has highest center?
+ 2. Which measure of center is more appropriate for before and after?
+
+
+     Expected Output
+Not Applicable
+
+
+
+
+  Copyrights© 2017, AcadGild. All Rights Reserved                                                    3
+
