@@ -43,10 +43,58 @@ Not Applicable
 
    Problem Statement
 library(RcmdrPlugin.IPSUR)
-data(RcmdrTestDrive)
+    data(RcmdrTestDrive)
 Perform the below operations:
- 1. Compute the measures of central tendency for salary and reduction which variable has highest center?
+1. Compute the measures of central tendency for salary and reduction which variable has highest center?
+ 
+Answer:
+> # measures of central tendency for salary
+> library(RcmdrPlugin.IPSUR)
+> x<- c(mean(RcmdrTestDrive$salary),median(RcmdrTestDrive$salary))
+> x
+[1] 724.5164 710.1500
+> # measures of central tendency for reduction
+> y<- c(median(RcmdrTestDrive$reduction),mean(RcmdrTestDrive$reduction))
+> y
+[1] 139.500 223.631
+> # check for variable with highest center by plotting histogram or by checking kurtosis which describes the amount of peakedness of a distribution
+> library(psych)
+> kurtosi(RcmdrTestDrive$salary)
+[1] 0.2006576
+> kurtosi(RcmdrTestDrive$reduction)
+[1] 10.01655
+> y<-RcmdrTestDrive$reduction
+> h<- hist(y, breaks = 10, col = "green", xlab = "reduction", 
++          main= "histogram of reduction with normal curve")
+> x<-RcmdrTestDrive$salary
+> h<- hist(x, breaks = 10, col = "yellow", xlab = "salary", 
++          main= "histogram of salary with normal curve")
+> source('C:/Users/Manish Chugh/Desktop/ACADGILD/Assignments from Dashboard/Session8Assignment2.R')
+
+Histograms saved on github id: 
+      DATA-ANALYTICS-WITH-R-EXCEL-TABLEAU_Session8Assignment8.2/8.2.1 histogram of reduction with normal curve.png
+    
+      DATA-ANALYTICS-WITH-R-EXCEL-TABLEAU_Session8Assignment8.2/8.2.1 histogram of salary with normal curve.png
+      
+      
  2. Which measure of center is more appropriate for before and after?
+
+Answer:
+# boxplot for median of after variable
+
+> boxplot(RcmdrTestDrive$after,horizontal = T,col = "blue",xlab="after",ylab="Boxplot", main="boxplot for median of after variable")
+# More data is concentrated on Left because of assymetrical distribution
+
+> boxplot(RcmdrTestDrive$before,horizontal = T,col = "red",xlab="before",ylab="Boxplot", main="boxplot for median of before variable")
+# this is more balanced distribution, so median of before variable would be more appropriate for the measure of center
+
+> source('C:/Users/Manish Chugh/Desktop/ACADGILD/Assignments from Dashboard/Session8Assignment2.R')
+
+boxplot saved on github id: 
+      DATA-ANALYTICS-WITH-R-EXCEL-TABLEAU_Session8Assignment8.2/8.2.2 boxplot for median of after variable.png
+    
+      DATA-ANALYTICS-WITH-R-EXCEL-TABLEAU_Session8Assignment8.2/8.2.2 boxplot for median of before variable.png
+    
 
 
      Expected Output
